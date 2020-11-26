@@ -22,7 +22,7 @@
                 <input type="number" id="num" name="num" class="form-control" min=1 required>
                 <br>
                 <label>Data type                      </label>
-                <select name="type" id="type" class="form-control"  required>
+                <select name="type" id="type" class="form-control" required>
                     <option value="deci">Decimal</option>
                     <option value="hexa">Hexa-Decimal</option>
                 </select>
@@ -117,7 +117,7 @@
                 }
                 else{
                     
-                    alert("Error Occured\nSender CheckSum = "+senderchecksum);
+                    alert("Error Occured\nSender CheckSum = "+senderchecksum+"\nReciever CheckSum = "+recieverchecksum);
                 }
                 
         });
@@ -150,7 +150,9 @@
                 
                 var bin1=wrap1.replace(/[0-1]/g, (v) => (v == 1 ? 0 : 1));
                 
-                var recieverchecksum=parseInt(bin1.slice(bin1.length-rep),2);
+                recieverchecksum=parseInt(bin1.slice(bin1.length-rep),2);
+
+               
         }
 
         function hexaCheck()
